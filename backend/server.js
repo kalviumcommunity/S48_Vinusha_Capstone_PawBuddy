@@ -8,6 +8,7 @@ const bodyParser = require('body-parser');
 const routes = require('./routes');
 app.use(bodyParser.json())
 app.use('/',routes);
+
 //connecting mongoDB
 mongoose.connect(mongodburi)
 
