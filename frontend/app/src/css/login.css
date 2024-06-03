@@ -1,0 +1,77 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #F8F7F6;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #F8F7F6;
+  }
+  
+  .login-title {
+    font-family: 'Salsa', cursive;
+    font-size: 36px;
+    color: #33658A;
+    margin-bottom: 20px;
+  }
+  
+  .login-form {
+    background-color: #FFFFFF;
+    padding: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    width: 300px;
+  }
+  
+  .login-form label {
+    display: block;
+    margin-bottom: 8px;
+    color: #33658A;
+    font-size: 14px;
+  }
+  
+  .login-form input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #EDEDED;
+    border-radius: 4px;
+  }
+  
+  .login-button {
+    background-color: #A17D60;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    width: 100%;
+  }
+  
+  .login-button:hover {
+    background-color: #8E6C4B;
+  }
+  
+  .signup-prompt {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #33658A;
+  }
+  
+  .signup-prompt a {
+    color: #A17D60;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .signup-prompt a:hover {
+    text-decoration: underline;
+  }
+  
