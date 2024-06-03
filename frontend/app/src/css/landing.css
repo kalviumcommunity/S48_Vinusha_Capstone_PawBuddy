@@ -10,7 +10,7 @@ body {
 
 .navbar {
   background-color: #F8F7F6;
-  color: #33658A;
+  color: #A17D60;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: 60px;
   display: flex;
@@ -41,6 +41,10 @@ body {
   color: #A17D60;
   text-decoration: none;
   font-weight: bold;
+  background-color: #F8F7F6;
+}
+.login-button:hover {
+  background-color: #F8F7F6;
 }
 
 .main-content {
@@ -158,4 +162,40 @@ body {
   .sub-image-text {
     font-size: 18px;
   }
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-content {
+  background: #FFFFFF;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.close-popup-button {
+  background-color: #A17D60;
+  color: #FFFFFF;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 4px;
+  margin-top: 20px;
+}
+
+.close-popup-button:hover {
+  background-color: #8E6C4B;
 }
