@@ -8,6 +8,7 @@ router.post('/items', (req, res) => {
     const newItem = req.body;
     items.push(newItem);
     res.status(201).json(newItem);
+    
 });
 
 // Read operation - GET
