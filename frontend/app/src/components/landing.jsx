@@ -39,7 +39,7 @@ const LandingPage = () => {
           <img src={mainImage} alt="Main" className="main-image" />
           <div className="quote-container">
             <p className="quote-text">Keep your furry friend happy and healthy</p>
-            <Link to="/signup" className="get-started-link">
+            <Link to="/signup" className="get-started-link" onClick={handleGetStarted}>
             <button className="get-started-button">Get Started</button>
           </Link>
           </div>
@@ -62,7 +62,7 @@ const LandingPage = () => {
       {showPopup && (
         <div className="popup">
           <div className="popup-content">
-            <p>Please login to continue. Click on catalog for the information about our services.</p>
+            <p>Please log in to proceed. <br /> <br />To discover more about our services, click on 'Catalog'.</p>
             <button className="close-popup-button" onClick={closePopup}>Close</button>
           </div>
         </div>

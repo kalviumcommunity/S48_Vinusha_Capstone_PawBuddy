@@ -175,8 +175,18 @@ body {
   justify-content: center;
   align-items: center;
   z-index: 1000;
+
+  animation: fadeIn 0.5s ease;
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0; /* Start with opacity 0 */
+  }
+  to {
+    opacity: 1; /* End with opacity 1 */
+  }
+}
 .popup-content {
   background: #FFFFFF;
   padding: 20px;
@@ -198,4 +208,36 @@ body {
 
 .close-popup-button:hover {
   background-color: #8E6C4B;
+}
+
+.get-started-button {
+  background-color: #F8F7F6;
+  color: #A17D60;
+  border: none;
+  font-size: 19px;
+  cursor: pointer;
+  margin-top: 10px;
+  font-family: 'Sanchez', serif;
+  /* Add animation properties */
+  transition: all 0.3s ease;
+}
+
+.get-started-button:hover {
+  color: #000000;
+  transform: scale(1.1); /* Increase button size on hover */
+}
+/* Add animation to the button */
+.get-started-link {
+  animation: popIn 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Animation name, duration, and easing */
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0; /* Start with opacity 0 */
+    transform: scale(0.5); /* Start smaller */
+  }
+  to {
+    opacity: 1; /* End with opacity 1 */
+    transform: scale(1); /* End size */
+  }
 }
