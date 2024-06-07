@@ -11,3 +11,6 @@ Day 2: Work on the High-Fidelity design for the website - complete the design. (
 Day 3: Work on the High-Fidelity design for the website - edit the designs and make a prototype (2nd day).
 Day 4: Will set up a GitHub project and clone the repository.
 Day 5: Start with the coding - backend (installing packages and basic code for server.js).
+
+# Deployed link (Frontend)
+https://pawbuddy.pages.dev/
