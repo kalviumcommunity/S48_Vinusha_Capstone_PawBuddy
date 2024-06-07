@@ -6,6 +6,7 @@ import foodImage from '../images/foodcat.jpeg'; // Updated food image path
 import vetImage from '../images/dog1.jpeg'; // Updated vet image path
 import vaccinationImage from '../images/dog2.jpeg'; // Updated vaccination image path
 import { Link, useNavigate} from 'react-router-dom';
+import Navbar from './NavBar';
 
 const LandingPage = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -25,15 +26,7 @@ const LandingPage = () => {
 
   return (
     <div className="landing-container">
-      <nav className="navbar">
-        <div className="website-name">PawBuddy</div>
-        <ul className="nav-links">
-          <li><a href="#home" className="nav-link">HOME</a></li>
-          <li><a href="#about" className="nav-link">ABOUT US</a></li>
-          <li><a href="#catalog" className="nav-link">CATALOG</a></li>
-          <li><Link to="/login" className="nav-link login-button">LOGIN</Link></li>
-        </ul>
-      </nav>
+      <Navbar/>
       <div className="main-content">
       <div className="main-image-container">
           <img src={mainImage} alt="Main" className="main-image" />

@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Salsa&display=swap');
+
+.navbar {
+  background-color: #F8F7F6;
+  color: #A17D60;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.website-name {
+  font-family: 'Salsa', cursive;
+  font-size: 24px;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-link {
+  margin-left: 20px;
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav-link.login-button {
+  padding: 5px 10px;
+  color: #A17D60;
+  text-decoration: none;
+  font-weight: bold;
+  background-color: #F8F7F6;
+}
+
+.login-button:hover {
+  background-color: #F8F7F6;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .nav-link {
+    margin: 5px 0;
+  }
+}

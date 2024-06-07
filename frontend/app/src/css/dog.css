@@ -1,0 +1,109 @@
+/* dog.css */
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-style: medium;
+    background-color: #F8F7F6;
+    background-image: linear-gradient(135deg, #f8f7f6 25%, #f3e6e3 25%, #f3e6e3 50%, #f8f7f6 50%, #f8f7f6 75%, #f3e6e3 75%, #f3e6e3);
+  }
+
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  
+  /* Styling for the thin lines between sections */
+.dog-section-divider {
+    margin: 2rem auto; /* Adjusted margin */
+    width: 80%; /* Increased width */
+    border-top: 1px solid rgba(0, 0, 0, 0.2); /* Thin line */
+    opacity: 0.5; /* Reduced opacity */
+}
+  
+  /* Styling for the dog service section container */
+  .dog-container {
+    text-align: center;
+    color: #5c3d2e;
+    animation: fadeIn 0.5s ease; /* Fade in animation */
+  }
+  
+  /* Styling for the dog title with an elegant font */
+  .dog-title {
+    font-family: 'Playfair Display', serif; /* Elegant font */
+    font-size: 2.5rem;
+    margin-top: 2rem;
+  }
+  
+  /* Styling for the dog description */
+  .dog-description {
+    font-size: 1.25rem;
+    margin: 1.5rem 0;
+  }
+  
+  /* Styling for the dog content */
+  .dog-content {
+    margin: 2rem auto;
+    max-width: 60rem;
+    text-align: center;
+  }
+  
+  /* Styling for each dog service */
+  .dog-service {
+    margin-bottom: 2rem;
+    animation: fadeIn 0.5s ease; /* Fade in animation */
+  }
+  
+  /* Styling for the dog service image */
+/* Styling for the dog service image */
+.dog-service-image {
+    width: 14rem;
+    height: 14rem;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #8E6C4B;
+    margin-bottom: 1rem;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.5s ease, border-color 0.3s ease; /* Increased transition duration */
+}
+
+/* Styling for the dog service image hover effect */
+.dog-service-image:hover {
+    animation: rotate 2.0s linear infinite; /* Slower rotation animation */
+    transform: scale(1.5); /* Increased scale on hover */
+    border-color: #6B4423;
+}
+
+  
+  /* Styling for the dog service button */
+  .dog-service-button {
+    background-color: #6B4423;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for the dog service button hover effect */
+  .dog-service-button:hover {
+    background-color: #8E6C4B;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+  }
+  

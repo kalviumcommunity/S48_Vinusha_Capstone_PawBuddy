@@ -4,6 +4,8 @@ import LandingPage from '../src/components/landing';
 import Login from '../src/components/login';
 import Signup from '../src/components/signup';
 import ChoosePet from '../src/components/choosepet'
+import Dog from './components/Dog';
+
 function App() {
   return (
     <Router>
@@ -12,6 +14,7 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
         <Route path="/choosepet" element={<ChoosePet />} />
+        <Route path="/dog" element={<Dog />} />
       </Routes>
     </Router>
   );
