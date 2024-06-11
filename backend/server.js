@@ -7,10 +7,11 @@ require('dotenv').config();
 const mongodburi = process.env.MONGODB_URI;
 const bodyParser = require('body-parser');
 const routes = require('./routes');
+const cors = require('cors'); 
 
 app.use(bodyParser.json());
 app.use('/', routes);
-
+app.use(cors()); 
 // Connecting to MongoDB with error handling
 mongoose.connect(mongodburi, {
   useNewUrlParser: true,

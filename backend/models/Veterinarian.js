@@ -1,4 +1,3 @@
-// models/Veterinarian.js
 const mongoose = require('mongoose');
 
 const veterinarianSchema = new mongoose.Schema({
@@ -34,9 +33,9 @@ const veterinarianSchema = new mongoose.Schema({
   }
 }, {
   timestamps: true,
-  collection: 'vet' // Specify the collection name
+  collection: 'vet' 
 });
 
-const Veterinarian = mongoose.model('vet', veterinarianSchema);
+const Veterinarian = mongoose.model('Veterinarian', veterinarianSchema);
 
 module.exports = Veterinarian;

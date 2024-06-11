@@ -1,34 +1,20 @@
+//routes.js
+
 const express = require('express');
 const router = express.Router();
+const Veterinarian = require('./models/Veterinarian');
+const cors = require('cors');
 
-let items = []; 
+router.use(cors());
 
-// Create operation - POST
-router.post('/items', (req, res) => {
-    const newItem = req.body;
-    items.push(newItem);
-    res.status(201).json(newItem);
-    
-});
-
-// Read operation - GET
-router.get('/items', (req, res) => {
-    res.json(items);
-});
-
-// Update operation - PUT
-router.put('/items/:id', (req, res) => {
-    const itemId = req.params.id;
-    const updatedItem = req.body;
-    items[itemId] = updatedItem;
-    res.json(updatedItem);
-});
-
-// Delete operation - DELETE
-router.delete('/items/:id', (req, res) => {
-    const itemId = req.params.id;
-    items.splice(itemId, 1);
-    res.sendStatus(204);
+//get vet
+router.get('/vet', async (req, res) => {
+    try {
+        const vets = await Veterinarian.find();
+        res.json(vets);
+    } catch (error) {
+        res.status(500).json({ error: error.message });
+    }
 });
 
 module.exports = router;

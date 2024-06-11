@@ -1,3 +1,5 @@
+//Cat.jsx
+
 import React from 'react';
 import '../css/cat.css';
 import contentcat2 from '../images/contentcat2.jpeg';
