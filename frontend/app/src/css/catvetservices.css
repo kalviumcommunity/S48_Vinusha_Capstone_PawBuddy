@@ -1,18 +1,78 @@
-.cat-vet-services-container {
+/* catvetservices.css */
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #343a40;
+  }
+  
+  h1 {
     text-align: center;
-    color: #5c3d2e;
-    padding: 2rem;
+    font-size: 2.5em;
+    color: #007bff;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
   
-  .cat-vet-services-title {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+  .vet-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px;
+  }
+  
+  .vet-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .vet-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+  
+  .vet-card h2 {
+    font-size: 1.5em;
+    color: #17a2b8;
+    margin: 0 0 10px;
+  }
+  
+  .vet-card p {
+    font-size: 1em;
+    color: #6c757d;
+    margin: 5px 0;
+  }
+  
+  .vet-card p span {
     font-weight: bold;
-    font-family: 'Playfair Display', serif;
+    color: #343a40;
   }
   
-  .cat-vet-services-description {
-    font-size: 1.25rem;
-    margin: 1.5rem 0;
+  .vet-card .fee {
+    font-size: 1.2em;
+    color: #28a745;
+    font-weight: bold;
+    margin-top: 10px;
+  }
+  
+  .no-data {
+    text-align: center;
+    font-size: 1.2em;
+    color: #dc3545;
+    margin-top: 50px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .vet-card {
+      width: 90%;
+    }
   }
   
