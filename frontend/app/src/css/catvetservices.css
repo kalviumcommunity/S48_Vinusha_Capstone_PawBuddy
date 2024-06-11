@@ -1,0 +1,18 @@
+.cat-vet-services-container {
+    text-align: center;
+    color: #5c3d2e;
+    padding: 2rem;
+  }
+  
+  .cat-vet-services-title {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  .cat-vet-services-description {
+    font-size: 1.25rem;
+    margin: 1.5rem 0;
+  }
+  
