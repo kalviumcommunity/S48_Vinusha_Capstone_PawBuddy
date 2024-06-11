@@ -6,6 +6,7 @@ import Signup from '../src/components/signup';
 import ChoosePet from '../src/components/choosepet';
 import Dog from '../src/components/Dog';
 import Cat from '../src/components/Cat';
+import CatVetServices from './components/CatVetServices';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/choosepet" element={<ChoosePet />} />
         <Route path="/dog" element={<Dog />} />
         <Route path="/cat" element={<Cat />} />
+        <Route path="/cat-vet-services" element={<CatVetServices />} /> 
       </Routes>
     </Router>
   );

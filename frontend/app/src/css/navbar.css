@@ -2,7 +2,7 @@
 
 .navbar {
   background-color: #F8F7F6;
-  color: #A17D60;
+  color: #432a09;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   height: 60px;
   display: flex;
@@ -36,9 +36,9 @@
   background-color: #F8F7F6;
 }
 
-.login-button:hover {
+/* .login-button:hover {
   background-color: #F8F7F6;
-}
+} */
 
 /* Responsive Design */
 @media (max-width: 768px) {

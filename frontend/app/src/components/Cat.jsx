@@ -4,7 +4,16 @@ import contentcat2 from '../images/contentcat2.jpeg';
 import contentcat3 from '../images/contentcat3.jpeg';
 import contentcat4 from '../images/contentcat4.jpeg';
 import Navbar from './NavBar2';
+import { useNavigate } from 'react-router-dom';
+
+
 const Cat = () => {
+  const navigate = useNavigate();
+
+  const handleLearnMoreClick = () => {
+    navigate('/cat-vet-services');
+  };
+
   return (
     <div className="cat-container">
         <Navbar />
@@ -29,7 +38,7 @@ const Cat = () => {
           <img src={contentcat4} alt="Cat Veterinary Services" className="cat-service-image" />
           <h2>Cat Veterinary Services</h2>
           <p>Meet with vets virtually for expert advice.</p>
-          <button className="cat-service-button">Learn More</button>
+          <button className="cat-service-button" onClick={handleLearnMoreClick}>Learn More</button>
         </div>
       </div>
     </div>
