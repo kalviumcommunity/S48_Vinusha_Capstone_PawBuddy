@@ -16,4 +16,4 @@ Day 5: Start with the coding - backend (installing packages and basic code for s
 https://pawbuddy.pages.dev/
 
 # Deployed link (Backend)
-https://s48-vinusha-capstone-pawbuddy.onrender.com 
+https://s48-vinusha-capstone-pawbuddy.onrender.com/vet  
