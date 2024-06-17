@@ -4,8 +4,14 @@ import '../css/dog.css';
 import contentDog1 from '../images/contentdog3.jpeg';
 import contentDog2 from '../images/contentdog2.jpeg';
 import contentDog3 from '../images/contentdog1.jpeg';
+import { useNavigate } from 'react-router-dom';
 
 const Dog = () => {
+  const navigate = useNavigate();
+
+  const handleLearnMoreClick = () => {
+    navigate('/vet-services');
+  };
     return (
         <div className="dog-container">
           <Navbar /> {/* Use Navbar */}
@@ -32,7 +38,7 @@ const Dog = () => {
               <img src={contentDog3} alt="Veterinary Services" className="dog-service-image" />
               <h2>Veterinary Services</h2>
               <p>Meet your vet virtually! Schedule online consultations with our expert veterinarians.</p>
-              <button className="dog-service-button">Learn More</button>
+              <button className="dog-service-button" onClick={handleLearnMoreClick}>Learn More</button>
             </div>
           </div>
         </div>

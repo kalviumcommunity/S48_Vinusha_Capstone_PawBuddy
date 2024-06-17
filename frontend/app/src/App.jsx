@@ -21,7 +21,7 @@ function App() {
         <Route path="/choosepet" element={<ChoosePet />} />
         <Route path="/dog" element={<Dog />} />
         <Route path="/cat" element={<Cat />} />
-        <Route path="/cat-vet-services" element={<CatVetServices />} /> 
+        <Route path="/vet-services" element={<CatVetServices />} /> 
         <Route path="/add-vet" element={<AddVetForm />} />
       </Routes>
     </Router>

@@ -13,7 +13,7 @@ const Cat = () => {
   const navigate = useNavigate();
 
   const handleLearnMoreClick = () => {
-    navigate('/cat-vet-services');
+    navigate('/vet-services');
   };
 
   return (
