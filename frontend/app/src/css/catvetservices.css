@@ -1,78 +1,149 @@
-/* catvetservices.css */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900&display=swap');
 
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f8f9fa;
-    margin: 0;
-    padding: 0;
-    color: #343a40;
-  }
-  
-  h1 {
+.cat-vet-services-container {
+    font-family: "Montserrat", sans-serif;
+    background-color: #F8F7F6;
+    background-image: linear-gradient(135deg, rgba(255, 182, 193, 0.1) 25%, transparent 25%, transparent 50%, rgba(255, 182, 193, 0.1) 50%, rgba(255, 182, 193, 0.1) 75%, transparent 75%, transparent);
+    padding: 20px 10px;
+    max-width: 1200px;
+    margin: auto;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     text-align: center;
-    font-size: 2.5em;
-    color: #007bff;
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-  
-  .vet-container {
+}
+
+.cat-vet-services-title {
+    font-size: 2rem;
+    color: #5c3d2e;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.vet-cards-container {
     display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 20px;
-  }
-  
-  .vet-card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin: 15px;
-    padding: 20px;
-    width: 300px;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.vet-card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 70%;
+    max-width: 700px;
     transition: transform 0.3s, box-shadow 0.3s;
-  }
-  
-  .vet-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  }
-  
-  .vet-card h2 {
-    font-size: 1.5em;
-    color: #17a2b8;
-    margin: 0 0 10px;
-  }
-  
-  .vet-card p {
-    font-size: 1em;
-    color: #6c757d;
-    margin: 5px 0;
-  }
-  
-  .vet-card p span {
+    animation: fadeIn 0.5s ease;
+    display: flex;
+    align-items: center;
+}
+
+.vet-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.vet-image {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-right: 20px;
+    border: 3px solid #e1c9b1;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.vet-image:hover {
+    transform: scale(1.05);
+    border-color: #6B4423;
+}
+
+.vet-details {
+    text-align: left;
+    flex-grow: 1;
+}
+
+.vet-name {
+    font-size: 1.25rem;
+    color: #5c3d2e;
+    margin-bottom: 5px;
     font-weight: bold;
-    color: #343a40;
-  }
-  
-  .vet-card .fee {
-    font-size: 1.2em;
-    color: #28a745;
+    text-transform: capitalize;
+}
+
+.vet-detail {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+.vet-detail strong {
+    color: #5c3d2e;
     font-weight: bold;
+}
+
+.consultation-fee {
+    font-size: 1rem;
+    color: #5c3d2e;
     margin-top: 10px;
-  }
-  
-  .no-data {
+    font-weight: bold;
+}
+
+.phone-number {
+    font-size: 0.9rem;
+    color: #5c3d2e;
+    margin-top: 5px;
+    font-weight: bold;
+}
+
+.vet-button {
+    background-color: #644223;
+    color: white;
+    padding: 0.5rem 1rem;
     text-align: center;
-    font-size: 1.2em;
-    color: #dc3545;
-    margin-top: 50px;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
+    border-radius: 0.5rem;
+    margin-top: 10px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    border: none;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.vet-button:hover {
+    background-color: #8E6C4B;
+    transform: translateY(-5px);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 768px) {
     .vet-card {
-      width: 90%;
+        width: 90%;
+        flex-direction: column;
+        align-items: center;
     }
-  }
-  
+
+    .vet-image {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .vet-details {
+        text-align: center;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

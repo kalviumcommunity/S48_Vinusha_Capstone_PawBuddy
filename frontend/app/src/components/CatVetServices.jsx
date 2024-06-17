@@ -23,20 +23,24 @@ const CatVetServices = () => {
     }, []);
 
     return (
-        <div>
-            <h1>Veterinarian Services</h1>
-            <div className="vet-container">
+<div className="cat-vet-services-container">
+            <h1 className="cat-vet-services-title">Veterinarian Services</h1>
+            <div className="vet-cards-container">
                 {vets.length === 0 ? (
-                    <p className="no-data">No veterinarian data available</p>
+                    <p>No veterinarian data available</p>
                 ) : (
                     vets.map((vet) => (
                         <div className="vet-card" key={vet._id}>
-                            <h2>{vet.name}</h2>
-                            <p><span>Gender:</span> {vet.gender}</p>
-                            <p><span>Qualification:</span> {vet.qualification}</p>
-                            <p><span>Specialisation:</span> {vet.specialisation}</p>
-                            <p className="fee">Consultation Fee: ${vet.consultation_fee}</p>
-                            <p><span>Phone Number:</span> {vet.phone_number}</p>
+                            <img src={`https://api.adorable.io/avatars/285/${vet._id}.png`} alt={vet.name} className="vet-image" />
+                            <div className="vet-details">
+                                <h2 className="vet-name">{vet.name}</h2>
+                                <p className="vet-detail"><strong>Gender:</strong> {vet.gender}</p>
+                                <p className="vet-detail"><strong>Qualification:</strong> {vet.qualification}</p>
+                                <p className="vet-detail"><strong>Specialisation:</strong> {vet.specialisation}</p>
+                                <p className="consultation-fee">Consultation Fee: ${vet.consultation_fee}</p>
+                                <p className="phone-number">Phone Number: {vet.phone_number}</p>
+                                <button className="vet-button">More Details</button>
+                            </div>
                         </div>
                     ))
                 )}
