@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import '../css/catvetservices.css';
+import { useNavigate } from 'react-router-dom';
 
 const CatVetServices = () => {
     const [vets, setVets] = useState([]);
-
+    const navigate = useNavigate();
     useEffect(() => {
         const fetchVets = async () => {
             try {
@@ -22,9 +23,15 @@ const CatVetServices = () => {
         fetchVets();
     }, []);
 
+    const handleAddDetailsClick = () => {
+        navigate('/add-vet');
+    };
+
     return (
 <div className="cat-vet-services-container">
-            <h1 className="cat-vet-services-title">Veterinarian Services</h1>
+<h1 className="cat-vet-services-title">Veterinarian Services</h1>
+            <p className="vet-call-to-action">Are you a veterinarian? Share your expertise and help people with your valuable advice.</p>
+            <button className="vet-add-details-button" onClick={handleAddDetailsClick}>Add Details</button>
             <div className="vet-cards-container">
                 {vets.length === 0 ? (
                     <p>No veterinarian data available</p>
@@ -39,7 +46,7 @@ const CatVetServices = () => {
                                 <p className="vet-detail"><strong>Specialisation:</strong> {vet.specialisation}</p>
                                 <p className="consultation-fee">Consultation Fee: ${vet.consultation_fee}</p>
                                 <p className="phone-number">Phone Number: {vet.phone_number}</p>
-                                <button className="vet-button">More Details</button>
+                                <button className="vet-button">Book an appointment</button>
                             </div>
                         </div>
                     ))

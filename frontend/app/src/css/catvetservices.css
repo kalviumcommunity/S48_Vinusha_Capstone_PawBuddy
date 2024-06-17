@@ -147,3 +147,22 @@
         opacity: 1;
     }
 }
+
+.vet-add-details-button {
+  background-color: #644223;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;  /* Adjusted size */
+  font-size: 0.875rem;  /* Adjusted size */
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.vet-add-details-button:hover {
+  background-color: #8E6C4B;
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
