@@ -1,4 +1,3 @@
-//AddVetForm.jsx
 
 import React, { useState } from 'react';
 import axios from 'axios';
@@ -48,6 +47,14 @@ const AddVetForm = () => {
             });
             console.log('Form submitted successfully:', response.data);
             navigate('/cat-vet-services');
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        try {
+            const response = await axios.post('http://localhost:3000/vet', formData);
+            console.log('Form submitted successfully:', response.data);
+            navigate('/cat-vet-services'); // Navigate back to vet services page
+
         } catch (error) {
             console.error('Error submitting form:', error);
         }
@@ -81,10 +88,12 @@ const AddVetForm = () => {
                     <label>Phone Number:</label>
                     <input type="text" name="phone_number" value={formData.phone_number} onChange={handleChange} required />
                 </div>
+
                 <div className="form-group">
                     <label>Photo:</label>
                     <input type="file" name="image" onChange={handleFileChange} />
                 </div>
+
                 <button type="submit" className="submit-button">Submit</button>
             </form>
         </div>
