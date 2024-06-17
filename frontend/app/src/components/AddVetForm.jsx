@@ -1,4 +1,5 @@
-// AddVetForm.jsx
+//AddVetForm.jsx
+
 import React, { useState } from 'react';
 import axios from 'axios';
 import '../css/addvetform.css';
@@ -11,7 +12,8 @@ const AddVetForm = () => {
         qualification: '',
         specialisation: '',
         consultation_fee: '',
-        phone_number: ''
+        phone_number: '',
+        image: ''
     });
 
     const navigate = useNavigate();
@@ -24,12 +26,28 @@ const AddVetForm = () => {
         });
     };
 
+    const handleFileChange = (e) => {
+        setFormData({
+            ...formData,
+            image: e.target.files[0]
+        });
+    };
+
     const handleSubmit = async (e) => {
         e.preventDefault();
+        const form = new FormData();
+        for (const key in formData) {
+            form.append(key, formData[key]);
+        }
+
         try {
-            const response = await axios.post('http://localhost:3000/vet', formData);
+            const response = await axios.post('http://localhost:3000/vet', form, {
+                headers: {
+                    'Content-Type': 'multipart/form-data'
+                }
+            });
             console.log('Form submitted successfully:', response.data);
-            navigate('/cat-vet-services'); // Navigate back to vet services page
+            navigate('/cat-vet-services');
         } catch (error) {
             console.error('Error submitting form:', error);
         }
@@ -62,6 +80,10 @@ const AddVetForm = () => {
                 <div className="form-group">
                     <label>Phone Number:</label>
                     <input type="text" name="phone_number" value={formData.phone_number} onChange={handleChange} required />
+                </div>
+                <div className="form-group">
+                    <label>Photo:</label>
+                    <input type="file" name="image" onChange={handleFileChange} />
                 </div>
                 <button type="submit" className="submit-button">Submit</button>
             </form>
