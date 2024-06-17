@@ -11,7 +11,7 @@ const AddVetForm = () => {
         specialisation: '',
         consultation_fee: '',
         phone_number: '',
-        image: null // Initialize image as null
+        image: null 
     });
 
     const navigate = useNavigate();
@@ -27,7 +27,7 @@ const AddVetForm = () => {
     const handleFileChange = (e) => {
         setFormData({
             ...formData,
-            image: e.target.files[0] // Store the file object in formData
+            image: e.target.files[0] 
         });
     };
 
@@ -46,7 +46,7 @@ const AddVetForm = () => {
                 }
             });
             console.log('Form submitted successfully:', response.data);
-            navigate('/cat-vet-services'); // Navigate back to vet services page
+            navigate('/vet-services'); 
         } catch (error) {
             console.error('Error submitting form:', error);
         }

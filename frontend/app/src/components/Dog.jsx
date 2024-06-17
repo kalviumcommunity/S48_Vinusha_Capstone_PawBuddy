@@ -14,7 +14,7 @@ const Dog = () => {
   };
     return (
         <div className="dog-container">
-          <Navbar /> {/* Use Navbar */}
+          <Navbar /> 
           <div className="intro-section">
             <h1 className="dog-title">Welcome to the Dog Section</h1>
             <p className="dog-description">Discover a world of services tailored for your beloved dog. From food safety to veterinary services, we've got you covered!</p>
@@ -26,14 +26,14 @@ const Dog = () => {
               <p>Check whether the food you give is safe or not. We provide detailed information about safe and unsafe dog foods.</p>
               <button className="dog-service-button">Learn More</button>
             </div>
-            <hr className="dog-section-divider" /> {/* Add the divider */}
+            <hr className="dog-section-divider" /> 
             <div className="dog-service">
               <img src={contentDog2} alt="Vaccination Deadlines" className="dog-service-image" />
               <h2>Vaccination Deadlines</h2>
               <p>Stay up-to-date with your dog's vaccinations. Get details about necessary vaccinations and their schedules.</p>
               <button className="dog-service-button">Learn More</button>
             </div>
-            <hr className="dog-section-divider" /> {/* Add the divider */}
+            <hr className="dog-section-divider" /> 
             <div className="dog-service">
               <img src={contentDog3} alt="Veterinary Services" className="dog-service-image" />
               <h2>Veterinary Services</h2>

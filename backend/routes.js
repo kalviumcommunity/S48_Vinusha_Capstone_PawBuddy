@@ -30,14 +30,13 @@ router.get('/vet', async (req, res) => {
     }
 });
 
-// Assuming you have a route handler that fetches and sends veterinarian data
 router.get('/vet/:id', async (req, res) => {
     try {
         const vet = await Veterinarian.findById(req.params.id);
         if (!vet) {
             return res.status(404).json({ error: 'Veterinarian not found' });
         }
-        // Construct the image URL assuming uploads is the folder containing images
+       
         vet.image = `${req.protocol}://${req.get('host')}/uploads/${vet.image}`;
         res.json(vet);
     } catch (error) {
